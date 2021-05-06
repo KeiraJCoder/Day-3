@@ -1,0 +1,103 @@
+print ("what is your name?")
+name = input ()
+
+if name:
+    print("Hello {}, how are you".format(name))
+else:   
+    print ("You did not give me your name!")
+
+# empty string, value 0, floating point value 0.0, everything else is truthy
+
+
+def press_grind_beans():
+    print ("Grinding for 20 seconds")
+press_grind_beans()
+
+coffee_is_grinding = False
+
+def press_grind_beans(): #defining function
+    global coffee_is_grinding #scope
+if coffee_is_grinding: #if its equal to true, then print 
+    print("Stopping the grind") 
+    coffee_is_grinding = False
+else:                      #if not then print this thing
+    print("Grinding is about to begin")
+    coffee_is_grinding = True
+
+press_grind_beans()
+press_grind_beans()
+
+num1 = 10
+
+def num_func():
+    global num1
+    num1 = 3
+    print (num1)
+
+
+num_func()
+
+def cash_withdrawal (amount, accnum):
+    print ("Withdrawing {} from account {}".format (amount, accnum))
+cash_withdrawal (300, 50449921)
+cash_withdrawal (30, 50449921)
+cash_withdrawal (200, 50449921)
+
+def drink_order(size, type_of_drink):
+    print("Your size is {} and your order is {}".format(size, type_of_drink))
+
+drink_order("Venti", "Cappucino")
+drink_order("grande", "coffee")
+drink_order("small", "Green Tea")
+
+
+
+
+def add_up (num1, num2):
+    return num1 + num2
+add_up (7,3)
+print(add_up(2,5))
+
+def multiply_by_nine_fifths (celcius):
+    return celcius * (9/5)
+def get_fahrenheit (celcius) :
+    return multiply_by_nine_fifths(celcius) +32
+
+print ("The temperature is {}° F".format(get_fahrenheit(15)))
+
+def add_up(num1, num2):
+    return num1 + num2
+def add_moar(num3):
+    return add_up(10,10) + num3
+print(add_moar(4))
+
+order_count = 0
+pizza_type = 0
+def pizza_type (base):
+    global pizza_type
+    print ("Your pizza base is {} crust, ".format(base))
+def take_order (topping):
+    global order_count
+    print ("topped with {}".format(topping))
+
+    order_count += 1
+
+pizza_type ("Thin")
+take_order ("pineapple and ham")
+
+order_count = 0
+pizza_base = 0
+def take_order(topping):
+    global order_count
+    return ("topped with {}".format(topping))
+    order_count += 1
+def pizza_type(base):
+    global pizza_base
+    return ("Your pizza base is {} crust ".format(base))
+print(pizza_type("Thin")+take_order("various suspicious looking meats"))
+
+
+
+
+
+
